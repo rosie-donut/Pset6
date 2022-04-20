@@ -1,0 +1,36 @@
+from csv import reader, DictReader
+from sys import argv
+
+# Check if input is valid more than 3 arguments)
+if len(argv) < 3:
+    print("ERROR")
+    exit()
+# Read the DNA sequence from the file --- https://www.programiz.com/python-programming/reading-csv-files
+with open(argv[2]) as dnafile:
+    reader = csv.reader(dnafile)
+    for row in reader:
+        list = row
+# Store the information in a string
+DNA = dna[0]
+# Create a dictionary to store the DNA sequences that are to be counted
+nucleotides = {}
+# Extract the sequences from the DNA database into a list
+with open(argv[1]) as peoplefile:
+    people = reader(peoplefile)
+    for row in people:
+        DNASequences = row
+        DNASequences.pop(0)
+        break
+# Copy the list into a dictionary where the genes are the keys
+for item in DNASequences:
+    sequences[item] = 1
+# Iterate through the DNA sequence
+
+# Add a counter — if repetitions of the values from sequence dictionaries are found, add them up
+# hint provided in walkthrough use len(s), substrings in python s[i:j] takes all characters in s from i to
+# (not incl) j
+
+# Open the database (of people) file
+# Iterate through and compare to the sequences dictionary
+# use int(x) takes a string and returns int
+# If there is a match, print the name of the person; if not, no match.
