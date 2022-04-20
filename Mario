@@ -1,0 +1,14 @@
+import cs50 as cs
+
+while True:
+    height = cs.get_int("What is the height?\n")
+    if height > 0 and height < 9:
+        for r in range (1, height + 1):
+            for c2 in range (1, height + 1 - r):
+                print(" ", end="")
+            for c1 in range (1, r + 1):
+                print("#", end="")
+            print()
+        break
+    else:
+        print("Please enter a valid height.")
