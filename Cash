@@ -1,0 +1,25 @@
+import cs50 as cs
+
+quarters = 25
+dimes = 10
+nickels = 5
+pennies = 1
+
+while True:
+    change = cs.get_float("How much change is owed?\n")
+    if (change > 0):
+        cents = round(change * 100)
+
+        NumberofQuarters = cents // quarters
+        leftoverQ = cents % quarters
+        NumberofDimes = leftoverQ // dimes
+        leftoverD = leftoverQ % dimes
+        NumberofNickels = leftoverD // nickels
+        leftoverN = leftoverD % nickels
+        NumberofPennies = leftoverN // pennies
+        leftoverP = leftoverN % pennies
+
+        print(NumberofQuarters + NumberofDimes + NumberofNickels + NumberofPennies)
+        break
+    else:
+        print("Please enter a valid amount.")
